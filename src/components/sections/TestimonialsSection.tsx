@@ -9,28 +9,28 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       name: "Marco Rossi",
-      role: "Direttore",
+      role: "Titolare",
       company: "Autoscuola Veloce - Milano",
       content:
-        "ScuolaGuida.app ha trasformato completamente la gestione della nostra scuola. In 6 mesi abbiamo ridotto le assenze del 40% e aumentato la soddisfazione degli studenti. Il sistema di notifiche automatiche è fantastico.",
+        "Prima passavo ore al telefono per confermare le lezioni. Ora i ragazzi prenotano da soli e ricevono promemoria automatici. Ho recuperato almeno 2 ore al giorno che posso dedicare alla famiglia.",
       rating: 5,
       image: "/api/placeholder/80/80",
     },
     {
-      name: "Sara Bianchi",
-      role: "Proprietaria",
-      company: "Autoscuola Roma Nord",
+      name: "Laura Bianchi",
+      role: "Istruttrice",
+      company: "Guida Sicura Roma",
       content:
-        "Finalmente una piattaforma che comprende veramente le esigenze delle scuole guida italiane. L'assistente IA ci aiuta a personalizzare i percorsi di apprendimento e i risultati sono evidenti.",
+        "All'inizio ero scettica - ho 58 anni e non sono molto tecnologica. Ma il software è davvero semplice. Ora vedo subito quali studenti hanno bisogno di più attenzione e posso organizzarmi meglio.",
       rating: 5,
       image: "/api/placeholder/80/80",
     },
     {
       name: "Giuseppe Ferrari",
-      role: "Istruttore Senior",
-      company: "Driving School Torino",
+      role: "Direttore",
+      company: "Autoscuola Centrale Torino",
       content:
-        "La formazione è stata eccellente e il supporto tecnico è sempre disponibile. Ora posso concentrarmi sull'insegnamento invece di perdere tempo con la burocrazia. Consiglio vivamente ScuolaGuida.app.",
+        "L'assistenza è stata fondamentale. Quando ho avuto problemi mi hanno aiutato via WhatsApp in 10 minuti. I miei 3 istruttori si sono abituati in una settimana e ora non potrebbero più farne a meno.",
       rating: 5,
       image: "/api/placeholder/80/80",
     },
@@ -47,24 +47,24 @@ const TestimonialsSection = () => {
 
   const achievements = [
     {
-      number: "100+",
+      number: "150+",
       label: "Scuole Guida",
-      description: "Utilizzano la nostra piattaforma",
+      description: "In tutta Italia",
     },
     {
-      number: "50K+",
+      number: "12K+",
       label: "Studenti",
-      description: "Gestiti con successo",
+      description: "Attivi ogni mese",
     },
     {
-      number: "95%",
-      label: "Tasso di Successo",
-      description: "Promossi al primo tentativo",
+      number: "5 anni",
+      label: "Di esperienza",
+      description: "Nel settore",
     },
     {
-      number: "24/7",
-      label: "Supporto",
-      description: "Assistenza sempre disponibile",
+      number: "99%",
+      label: "Uptime",
+      description: "Sempre disponibile",
     },
   ];
 
@@ -82,14 +82,12 @@ const TestimonialsSection = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 dark:text-white mb-6 transition-colors duration-300">
-            Cosa Dicono le{" "}
-            <span className="text-blue-600 dark:text-blue-400">
-              Scuole Guida
-            </span>
+            Cosa dicono i nostri{" "}
+            <span className="text-blue-600 dark:text-blue-400">clienti</span>
           </h2>
           <p className="text-xl text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto leading-relaxed transition-colors duration-300">
-            Storie di successo reali da scuole guida che hanno trasformato la
-            loro gestione con ScuolaGuida.app.
+            Recensioni vere di gestori e istruttori che hanno scelto il nostro
+            software per semplificare il loro lavoro quotidiano.
           </p>
         </motion.div>
 
@@ -160,7 +158,7 @@ const TestimonialsSection = () => {
           transition={{ duration: 0.6 }}
         >
           <h3 className="text-2xl font-bold text-neutral-900 dark:text-white mb-8 transition-colors duration-300">
-            Si Fidano di Noi
+            Alcune delle scuole guida che ci hanno scelto
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
             {companies.map((company, index) => (
@@ -198,70 +196,18 @@ const TestimonialsSection = () => {
               whileHover={{ y: -5 }}
             >
               <div className="bg-white dark:bg-neutral-800 p-6 rounded-xl shadow-lg border border-neutral-200 dark:border-neutral-600 hover:shadow-xl transition-all duration-300">
-                <div className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2 transition-colors duration-300">
+                <h3 className="text-3xl md:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2 transition-colors duration-300">
                   {achievement.number}
-                </div>
-                <div className="text-lg font-semibold text-neutral-900 dark:text-white mb-1 transition-colors duration-300">
+                </h3>
+                <p className="font-semibold text-neutral-900 dark:text-white mb-1 transition-colors duration-300">
                   {achievement.label}
-                </div>
-                <div className="text-neutral-600 dark:text-neutral-300 text-sm transition-colors duration-300">
+                </p>
+                <p className="text-neutral-600 dark:text-neutral-400 text-sm transition-colors duration-300">
                   {achievement.description}
-                </div>
+                </p>
               </div>
             </motion.div>
           ))}
-        </motion.div>
-
-        {/* Trust Badges */}
-        <motion.div
-          className="text-center mt-16"
-          {...useScrollAnimation()}
-          variants={fadeInUp}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <div className="bg-white dark:bg-neutral-800 p-8 rounded-xl shadow-lg border border-neutral-200 dark:border-neutral-600 transition-colors duration-300">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors duration-300">
-                  <span className="text-green-600 dark:text-green-400 font-bold text-xl">
-                    ✓
-                  </span>
-                </div>
-                <h4 className="font-semibold text-neutral-900 dark:text-white mb-2 transition-colors duration-300">
-                  GDPR Compliant
-                </h4>
-                <p className="text-neutral-600 dark:text-neutral-300 text-sm transition-colors duration-300">
-                  Conformità totale alle normative europee
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors duration-300">
-                  <span className="text-blue-600 dark:text-blue-400 font-bold text-xl">
-                    🔒
-                  </span>
-                </div>
-                <h4 className="font-semibold text-neutral-900 dark:text-white mb-2 transition-colors duration-300">
-                  SSL Certificato
-                </h4>
-                <p className="text-neutral-600 dark:text-neutral-300 text-sm transition-colors duration-300">
-                  Crittografia di livello bancario
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-yellow-100 dark:bg-yellow-900/30 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors duration-300">
-                  <span className="text-yellow-600 dark:text-yellow-400 font-bold text-xl">
-                    ⭐
-                  </span>
-                </div>
-                <h4 className="font-semibold text-neutral-900 dark:text-white mb-2 transition-colors duration-300">
-                  ISO 27001
-                </h4>
-                <p className="text-neutral-600 dark:text-neutral-300 text-sm transition-colors duration-300">
-                  Standard internazionale per la sicurezza
-                </p>
-              </div>
-            </div>
-          </div>
         </motion.div>
       </div>
     </section>

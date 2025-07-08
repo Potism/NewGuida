@@ -16,56 +16,56 @@ const PricingSection = () => {
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "29",
+      name: "Piccola",
+      price: "39",
       period: "al mese",
-      description: "Perfetto per scuole guida di piccole dimensioni",
+      description: "Per scuole guida con pochi studenti",
       features: [
-        "Fino a 50 studenti",
-        "Gestione lezioni base",
-        "Calendario integrato",
-        "Notifiche email",
-        "Supporto email",
-        "Dashboard base",
-      ],
-      popular: false,
-      cta: "Inizia Gratis",
-    },
-    {
-      name: "Professional",
-      price: "59",
-      period: "al mese",
-      description: "La scelta più popolare per scuole guida in crescita",
-      features: [
-        "Fino a 200 studenti",
-        "Gestione lezioni avanzata",
-        "Calendario completo",
-        "Notifiche multi-canale",
-        "Supporto prioritario",
-        "Dashboard avanzata",
-        "Reportistica dettagliata",
-        "Integrazione pagamenti",
-      ],
-      popular: true,
-      cta: "Inizia Gratis",
-    },
-    {
-      name: "Enterprise",
-      price: "99",
-      period: "al mese",
-      description: "Soluzione completa per scuole guida enterprise",
-      features: [
-        "Studenti illimitati",
-        "Tutte le funzionalità Pro",
-        "API personalizzate",
-        "Branding personalizzato",
-        "Supporto dedicato 24/7",
-        "Manager account dedicato",
-        "Integrazioni custom",
+        "Fino a 100 studenti",
+        "Calendario lezioni",
+        "Gestione documenti",
+        "Promemoria email e SMS",
+        "Supporto via email",
         "Backup automatico",
       ],
       popular: false,
-      cta: "Contattaci",
+      cta: "Prova gratis",
+    },
+    {
+      name: "Media",
+      price: "69",
+      period: "al mese",
+      description: "La più scelta dalle scuole guida italiane",
+      features: [
+        "Fino a 300 studenti",
+        "Tutte le funzioni del piano Piccola",
+        "App mobile per studenti",
+        "Promemoria WhatsApp",
+        "Statistiche avanzate",
+        "Supporto telefonico",
+        "Formazione gratuita (2 ore)",
+        "Setup assistito gratuito",
+      ],
+      popular: true,
+      cta: "Prova gratis",
+    },
+    {
+      name: "Grande",
+      price: "99",
+      period: "al mese",
+      description: "Per scuole guida con più sedi o molti studenti",
+      features: [
+        "Studenti illimitati",
+        "Gestione multi-sede",
+        "Tutte le funzioni del piano Media",
+        "API per integrazioni",
+        "Manager dedicato",
+        "Supporto prioritario 24/7",
+        "Personalizzazioni su richiesta",
+        "Formazione estesa (8 ore)",
+      ],
+      popular: false,
+      cta: "Parliamone",
     },
   ];
 
@@ -87,16 +87,16 @@ const PricingSection = () => {
             variants={fadeInUp}
           >
             <Star className="w-4 h-4" />
-            Piani tariffari
+            Prezzi semplici e trasparenti
           </motion.div>
 
           <motion.h2
             className="text-4xl md:text-5xl font-bold text-neutral-900 dark:text-white mb-4 transition-colors duration-300"
             variants={fadeInUp}
           >
-            Scegli il Piano Perfetto per la Tua{" "}
+            Scegli il piano giusto per la tua{" "}
             <span className="text-blue-600 dark:text-blue-400">
-              Scuola Guida
+              scuola guida
             </span>
           </motion.h2>
 
@@ -104,8 +104,8 @@ const PricingSection = () => {
             className="text-xl text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto transition-colors duration-300"
             variants={fadeInUp}
           >
-            Tutti i piani includono 30 giorni di prova gratuita. Nessun costo di
-            setup, nessun impegno a lungo termine.
+            Tutti i piani includono 30 giorni di prova gratuita. Puoi cambiare o
+            cancellare in qualsiasi momento.
           </motion.p>
         </motion.div>
 
@@ -125,7 +125,7 @@ const PricingSection = () => {
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-20">
                   <div className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium">
-                    🔥 Più Popolare
+                    ⭐ Più scelta
                   </div>
                 </div>
               )}
@@ -175,7 +175,7 @@ const PricingSection = () => {
                   onClick={() => scrollToSection("#contact")}
                 >
                   {plan.cta}
-                  {plan.cta === "Inizia Gratis" && (
+                  {plan.cta === "Prova gratis" && (
                     <ArrowRight className="ml-2 w-4 h-4" />
                   )}
                 </Button>
@@ -195,25 +195,45 @@ const PricingSection = () => {
           <div className="flex flex-wrap justify-center gap-8 text-sm text-neutral-600 dark:text-neutral-300 transition-colors duration-300">
             <div className="flex items-center gap-2">
               <Check className="w-4 h-4 text-green-500" />
-              <span>30 giorni di prova gratuita</span>
+              <span>30 giorni gratis, sempre</span>
             </div>
             <div className="flex items-center gap-2">
               <Check className="w-4 h-4 text-green-500" />
-              <span>Nessun costo di setup</span>
+              <span>Nessun costo di attivazione</span>
             </div>
             <div className="flex items-center gap-2">
               <Check className="w-4 h-4 text-green-500" />
-              <span>Cancellazione in qualsiasi momento</span>
+              <span>Cancellazione facile</span>
             </div>
             <div className="flex items-center gap-2">
               <Check className="w-4 h-4 text-green-500" />
-              <span>Supporto in italiano</span>
+              <span>Fatturazione elettronica</span>
             </div>
           </div>
-          <p className="text-neutral-500 dark:text-neutral-400 text-sm max-w-2xl mx-auto transition-colors duration-300">
-            Tutti i prezzi sono in Euro e non includono IVA. I piani possono
-            essere cambiati o cancellati in qualsiasi momento.
-          </p>
+
+          <motion.div
+            className="mt-8 p-6 bg-neutral-50 dark:bg-neutral-800 rounded-xl max-w-2xl mx-auto transition-colors duration-300"
+            variants={fadeInUp}
+            transition={{ delay: 0.2 }}
+          >
+            <h3 className="text-lg font-semibold text-neutral-900 dark:text-white mb-2 transition-colors duration-300">
+              Non sei sicuro di quale piano scegliere?
+            </h3>
+            <p className="text-neutral-600 dark:text-neutral-300 mb-4 transition-colors duration-300">
+              Chiamaci al <strong>02 1234 5678</strong> oppure scrivici a{" "}
+              <strong>info@scuolaguida.app</strong>. Ti aiuteremo a scegliere il
+              piano più adatto alla tua scuola guida.
+            </p>
+            <motion.button
+              className="text-blue-600 dark:text-blue-400 font-medium hover:underline"
+              whileHover={{ scale: 1.05 }}
+              onClick={() => {
+                window.open("mailto:info@scuolaguida.app", "_blank");
+              }}
+            >
+              Invia una email →
+            </motion.button>
+          </motion.div>
         </motion.div>
       </div>
     </section>

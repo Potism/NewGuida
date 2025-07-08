@@ -22,43 +22,43 @@ const HeroSection = () => {
       suffix: "+",
       prefix: "",
       label: "Scuole Guida",
-      description: "Utilizzano la nostra piattaforma",
-      highlight: "Partnership attive",
+      description: "Usano la nostra piattaforma",
+      highlight: "Dal 2019",
     },
     {
       icon: Clock,
       value: 25000,
       suffix: "+",
       prefix: "",
-      label: "Allievi Gestiti",
-      description: "Con successo ogni anno",
-      highlight: "Risultati comprovati",
+      label: "Studenti",
+      description: "Hanno ottenuto la patente",
+      highlight: "Negli ultimi 3 anni",
     },
     {
       icon: Award,
-      value: 4.9,
+      value: 4.8,
       suffix: "/5",
       prefix: "",
-      label: "Soddisfazione",
-      description: "Valutazione media clienti",
-      highlight: "Eccellenza garantita",
+      label: "Valutazione",
+      description: "Media delle recensioni",
+      highlight: "Su 500+ recensioni",
     },
   ];
 
   const trustIndicators = [
     {
       icon: Star,
-      text: "Certificato ISO 27001",
+      text: "Certificato per la Sicurezza",
       color: "text-yellow-600 dark:text-yellow-400",
     },
     {
       icon: Sparkles,
-      text: "GDPR Compliant",
+      text: "Conforme al GDPR",
       color: "text-green-600 dark:text-green-400",
     },
     {
       icon: Award,
-      text: "Supporto 24/7",
+      text: "Assistenza Tecnica",
       color: "text-blue-600 dark:text-blue-400",
     },
   ];
@@ -114,16 +114,16 @@ const HeroSection = () => {
             >
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
               <Sparkles className="w-4 h-4" />
-              <span>La Scuola Guida Digitale del Futuro • Prova Gratuita</span>
+              <span>Software per Scuole Guida • 30 giorni gratis</span>
             </motion.div>
 
             {/* Enhanced Headline */}
             <motion.div variants={fadeInUp}>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-none text-neutral-900 dark:text-white mb-6 transition-colors duration-300">
-                Automatizza la Gestione della Tua{" "}
+                Gestisci la tua scuola guida senza{" "}
                 <span className="relative">
                   <span className="text-blue-600 dark:text-blue-400">
-                    Scuola Guida
+                    complicazioni
                   </span>
                   <motion.div
                     className="absolute -bottom-2 left-0 right-0 h-1 bg-blue-200 dark:bg-blue-800 rounded-full"
@@ -140,11 +140,12 @@ const HeroSection = () => {
               className="text-xl md:text-2xl lg:text-3xl font-light leading-relaxed text-neutral-600 dark:text-neutral-300 max-w-2xl transition-colors duration-300"
               variants={fadeInUp}
             >
-              La piattaforma completa che{" "}
+              Un software semplice che ti aiuta a{" "}
               <strong className="font-semibold text-neutral-800 dark:text-neutral-200">
-                semplifica iscrizioni, lezioni e progressi
+                organizzare lezioni, gestire gli studenti e tenere traccia dei
+                progressi
               </strong>{" "}
-              con gestione centralizzata e automatizzazione intelligente.
+              senza perdere tempo con la burocrazia.
             </motion.p>
 
             {/* Enhanced CTA Buttons */}
@@ -162,7 +163,7 @@ const HeroSection = () => {
                   onClick={() => scrollToSection("#pricing")}
                 >
                   <span className="relative z-10 flex items-center">
-                    Inizia Prova Gratuita 30 Giorni
+                    Prova gratis per 30 giorni
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </span>
                   <div className="absolute inset-0 bg-blue-700 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
@@ -180,7 +181,7 @@ const HeroSection = () => {
                   onClick={() => scrollToSection("#demo")}
                 >
                   <Play className="mr-2 w-5 h-5" />
-                  Guarda Demo Live
+                  Guarda una demo
                 </Button>
               </motion.div>
             </motion.div>
@@ -201,101 +202,136 @@ const HeroSection = () => {
                   </motion.div>
                 ))}
               </div>
-              <p className="text-sm text-neutral-400 dark:text-neutral-500 italic">
-                ✨ Utilizzato da oltre 150 scuole guida in Italia con il 98% di
-                soddisfazione
-              </p>
             </motion.div>
           </motion.div>
 
-          {/* Right Column - Enhanced Stats Cards */}
+          {/* Right Column - Statistics */}
           <motion.div
-            className="grid gap-6"
+            className="lg:pl-12"
             variants={staggerChildren}
             initial="hidden"
             animate="visible"
           >
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                className="group relative"
-                variants={fadeInUp}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                {/* Card Background with Gradient Border */}
-                <div className="absolute inset-0 bg-blue-100 dark:bg-blue-900/20 rounded-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
+            {/* Dashboard Mockup */}
+            <motion.div
+              className="mb-8 relative"
+              variants={fadeInUp}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="relative bg-white dark:bg-neutral-800 rounded-2xl shadow-2xl border border-neutral-200 dark:border-neutral-700 overflow-hidden">
+                {/* Browser Bar */}
+                <div className="bg-neutral-100 dark:bg-neutral-700 px-4 py-3 border-b border-neutral-200 dark:border-neutral-600 flex items-center gap-2">
+                  <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                  <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                  <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                  <div className="ml-4 bg-white dark:bg-neutral-600 rounded px-3 py-1 text-xs text-neutral-600 dark:text-neutral-300 flex-1">
+                    scuolaguida.app/dashboard
+                  </div>
+                </div>
 
-                <motion.div
-                  className="relative bg-white dark:bg-neutral-800 rounded-3xl p-8 border border-neutral-200 dark:border-neutral-700 shadow-sm hover:shadow-lg transition-all duration-500"
-                  whileHover={{ y: -8, scale: 1.02 }}
-                >
-                  {/* Floating label */}
-                  <div className="absolute -top-3 left-6 px-3 py-1 bg-blue-50 dark:bg-blue-900/50 border border-blue-200 dark:border-blue-800 rounded-full text-xs font-medium text-blue-700 dark:text-blue-300">
-                    {stat.highlight}
+                {/* Dashboard Content */}
+                <div className="p-6 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-neutral-800 dark:to-neutral-700">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-lg font-semibold text-neutral-900 dark:text-white">
+                      Dashboard Scuola Guida
+                    </h3>
+                    <div className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-3 py-1 rounded-full text-sm font-medium">
+                      Attiva
+                    </div>
                   </div>
 
-                  <div className="flex items-center gap-6">
-                    {/* Enhanced Icon */}
-                    <motion.div
-                      className="p-4 bg-blue-50 dark:bg-blue-900/30 rounded-2xl group-hover:bg-blue-100 dark:group-hover:bg-blue-900/50 transition-colors"
-                      whileHover={{ rotate: 5, scale: 1.1 }}
-                    >
-                      <stat.icon className="w-8 h-8 text-blue-600 dark:text-blue-400" />
-                    </motion.div>
+                  <div className="grid grid-cols-2 gap-3 mb-4">
+                    <div className="bg-white/80 dark:bg-neutral-600/50 p-3 rounded-lg">
+                      <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                        42
+                      </div>
+                      <div className="text-xs text-neutral-600 dark:text-neutral-300">
+                        Studenti attivi
+                      </div>
+                    </div>
+                    <div className="bg-white/80 dark:bg-neutral-600/50 p-3 rounded-lg">
+                      <div className="text-2xl font-bold text-green-600 dark:text-green-400">
+                        28
+                      </div>
+                      <div className="text-xs text-neutral-600 dark:text-neutral-300">
+                        Lezioni oggi
+                      </div>
+                    </div>
+                  </div>
 
-                    {/* Stats Content */}
+                  <div className="space-y-2">
+                    <div className="bg-white/80 dark:bg-neutral-600/50 p-2 rounded flex items-center gap-3">
+                      <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
+                        <div className="w-4 h-4 bg-blue-600 dark:bg-blue-400 rounded"></div>
+                      </div>
+                      <div className="flex-1">
+                        <div className="text-sm font-medium text-neutral-900 dark:text-white">
+                          Marco Rossi
+                        </div>
+                        <div className="text-xs text-neutral-600 dark:text-neutral-300">
+                          Lezione pratica - 14:30
+                        </div>
+                      </div>
+                    </div>
+                    <div className="bg-white/80 dark:bg-neutral-600/50 p-2 rounded flex items-center gap-3">
+                      <div className="w-8 h-8 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
+                        <div className="w-4 h-4 bg-green-600 dark:bg-green-400 rounded"></div>
+                      </div>
+                      <div className="flex-1">
+                        <div className="text-sm font-medium text-neutral-900 dark:text-white">
+                          Sofia Bianchi
+                        </div>
+                        <div className="text-xs text-neutral-600 dark:text-neutral-300">
+                          Lezione teorica - 16:00
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <div className="space-y-8">
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-white dark:bg-neutral-800 p-8 rounded-2xl shadow-lg border border-neutral-200 dark:border-neutral-700 hover:shadow-xl transition-all duration-300"
+                  variants={fadeInUp}
+                  transition={{ delay: index * 0.2 }}
+                  whileHover={{ y: -5, scale: 1.02 }}
+                >
+                  <div className="flex items-center gap-6">
+                    <div className="flex-shrink-0">
+                      <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center transition-colors duration-300">
+                        <stat.icon className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+                      </div>
+                    </div>
                     <div className="flex-1">
                       <div className="flex items-baseline gap-2 mb-2">
                         <AnimatedCounter
                           end={stat.value}
-                          prefix={stat.prefix}
                           suffix={stat.suffix}
-                          className="text-4xl font-bold text-neutral-900 dark:text-white"
+                          className="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white"
+                          duration={2}
                         />
-                        <span className="text-xl font-semibold text-neutral-700 dark:text-neutral-300">
-                          {stat.label}
-                        </span>
                       </div>
-                      <p className="text-neutral-500 dark:text-neutral-400 text-sm font-medium leading-relaxed">
+                      <h3 className="text-lg font-semibold text-neutral-900 dark:text-white mb-1 transition-colors duration-300">
+                        {stat.label}
+                      </h3>
+                      <p className="text-neutral-600 dark:text-neutral-300 transition-colors duration-300">
                         {stat.description}
+                      </p>
+                      <p className="text-sm text-blue-600 dark:text-blue-400 font-medium mt-1">
+                        {stat.highlight}
                       </p>
                     </div>
                   </div>
                 </motion.div>
-              </motion.div>
-            ))}
+              ))}
+            </div>
           </motion.div>
         </div>
       </div>
-
-      {/* Enhanced Scroll Indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.5, duration: 0.6 }}
-      >
-        <motion.div
-          className="flex flex-col items-center gap-2 cursor-pointer"
-          onClick={() => scrollToSection("#features")}
-          whileHover={{ scale: 1.1 }}
-        >
-          <span className="text-xs text-neutral-400 dark:text-neutral-500 font-medium">
-            Scopri di più
-          </span>
-          <motion.div
-            className="w-6 h-10 border-2 border-neutral-300 dark:border-neutral-600 rounded-full flex justify-center relative overflow-hidden"
-            animate={{ y: [0, 5, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          >
-            <motion.div
-              className="w-1 h-3 bg-neutral-400 dark:bg-neutral-500 rounded-full mt-2"
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            />
-          </motion.div>
-        </motion.div>
-      </motion.div>
     </section>
   );
 };

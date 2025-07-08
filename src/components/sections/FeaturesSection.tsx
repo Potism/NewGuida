@@ -18,55 +18,57 @@ const FeaturesSection = () => {
   const features = [
     {
       icon: Users,
-      title: "Iscrizioni Smart",
+      title: "Gestione Studenti",
       description:
-        "Sistema automatizzato per gestire nuove iscrizioni con documenti digitali e verifiche automatiche.",
+        "Tieni traccia di tutti i tuoi studenti in un unico posto. Carica documenti, gestisci i pagamenti e monitora i progressi facilmente.",
       size: "large", // Will span 2x2
       color: "blue",
     },
     {
       icon: Calendar,
-      title: "Lezioni Programmate",
+      title: "Calendario Lezioni",
       description:
-        "Calendario intelligente con booking automatico e gestione conflitti.",
+        "Programma le lezioni con un calendario semplice. I tuoi studenti possono prenotare direttamente gli slot disponibili.",
       size: "medium", // Will span 1x2
       color: "green",
     },
     {
       icon: BarChart3,
-      title: "Progressi Tracciati",
+      title: "Statistiche Chiare",
       description:
-        "Dashboard completa per monitorare i progressi di ogni studente.",
+        "Vedi rapidamente come stanno andando i tuoi studenti e quali argomenti richiedono più attenzione.",
       size: "medium", // Will span 1x2
       color: "purple",
     },
     {
       icon: Bell,
-      title: "Notifiche Multi-Canale",
+      title: "Promemoria Automatici",
       description:
-        "Email, SMS e push notifications per non perdere mai un appuntamento.",
+        "Invia promemoria via WhatsApp, email o SMS per le lezioni e gli esami. Riduci le assenze.",
       size: "small", // Will span 1x1
       color: "orange",
     },
     {
       icon: Shield,
-      title: "Sicurezza Garantita",
-      description: "Crittografia end-to-end e backup automatici.",
+      title: "Dati Sicuri",
+      description:
+        "I tuoi dati sono protetti e vengono salvati automaticamente ogni giorno.",
       size: "small",
       color: "red",
     },
     {
       icon: Smartphone,
       title: "App Mobile",
-      description: "Gestisci tutto da smartphone con app nativa.",
+      description:
+        "Accedi da smartphone o tablet. Perfetto quando sei in giro.",
       size: "small",
       color: "indigo",
     },
     {
       icon: Zap,
-      title: "Performance",
+      title: "Veloce e Semplice",
       description:
-        "Caricamento ultra-veloce e sincronizzazione in tempo reale.",
+        "Non serve essere esperti di computer. L'interfaccia è stata progettata per essere intuitiva.",
       size: "small",
       color: "yellow",
     },
@@ -137,26 +139,25 @@ const FeaturesSection = () => {
             variants={fadeInUp}
           >
             <Zap className="w-4 h-4" />
-            Funzionalità avanzate
+            Funzionalità principali
           </motion.div>
 
           <motion.h2
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 dark:text-white mb-6 transition-colors duration-300"
             variants={fadeInUp}
           >
-            Tutto quello che serve per{" "}
+            Tutto quello che ti serve per gestire la tua{" "}
             <span className="text-blue-600 dark:text-blue-400">
-              automatizzare
-            </span>{" "}
-            la tua scuola guida
+              scuola guida
+            </span>
           </motion.h2>
 
           <motion.p
             className="text-xl text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto leading-relaxed transition-colors duration-300"
             variants={fadeInUp}
           >
-            Una piattaforma completa che trasforma il modo di gestire studenti,
-            lezioni e amministrazione. Semplice, potente, professionale.
+            Un software pensato per i gestori di scuole guida che vogliono
+            risparmiare tempo e organizzare meglio il loro lavoro quotidiano.
           </motion.p>
         </motion.div>
 
@@ -194,44 +195,20 @@ const FeaturesSection = () => {
                   {/* Content */}
                   <div className="flex-1">
                     <h3
-                      className={`font-bold mb-4 ${
+                      className={`font-bold mb-4 text-neutral-900 dark:text-white transition-colors duration-300 ${
                         feature.size === "large"
                           ? "text-2xl md:text-3xl"
                           : feature.size === "medium"
                           ? "text-xl md:text-2xl"
-                          : "text-lg"
-                      } text-neutral-900 dark:text-white transition-colors duration-300`}
+                          : "text-lg md:text-xl"
+                      }`}
                     >
                       {feature.title}
                     </h3>
-                    <p
-                      className={`text-neutral-600 dark:text-neutral-300 leading-relaxed transition-colors duration-300 ${
-                        feature.size === "large"
-                          ? "text-lg"
-                          : feature.size === "medium"
-                          ? "text-base"
-                          : "text-sm"
-                      }`}
-                    >
+                    <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed transition-colors duration-300">
                       {feature.description}
                     </p>
                   </div>
-
-                  {/* Additional content for large cards */}
-                  {feature.size === "large" && (
-                    <div className="mt-8 pt-6 border-t border-neutral-200 dark:border-neutral-700 transition-colors duration-300">
-                      <div className="flex items-center gap-4 text-sm text-neutral-500 dark:text-neutral-400 transition-colors duration-300">
-                        <div className="flex items-center gap-2">
-                          <Clock className="w-4 h-4" />
-                          <span>Setup in 5 min</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Shield className="w-4 h-4" />
-                          <span>Sicuro & GDPR</span>
-                        </div>
-                      </div>
-                    </div>
-                  )}
                 </div>
               </Card>
             </motion.div>
@@ -240,29 +217,34 @@ const FeaturesSection = () => {
 
         {/* Bottom CTA */}
         <motion.div
-          className="text-center mt-20"
+          className="text-center mt-16"
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <p className="text-neutral-600 dark:text-neutral-300 mb-6 transition-colors duration-300">
-            Vuoi vedere tutte le funzionalità in azione?
-          </p>
-          <motion.button
-            className="inline-flex items-center gap-2 px-6 py-3 bg-white dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-600 rounded-xl text-neutral-700 dark:text-neutral-300 hover:bg-neutral-50 dark:hover:bg-neutral-700 hover:border-neutral-400 dark:hover:border-neutral-500 transition-all duration-300 font-medium"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => {
-              const element = document.querySelector("#demo");
-              if (element) {
-                element.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
-          >
-            <Zap className="w-4 h-4" />
-            Guarda la Demo Completa
-          </motion.button>
+          <div className="bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-xl p-8 max-w-2xl mx-auto transition-colors duration-300">
+            <h3 className="text-2xl font-bold text-neutral-900 dark:text-white mb-4 transition-colors duration-300">
+              Vuoi vedere come funziona?
+            </h3>
+            <p className="text-neutral-600 dark:text-neutral-300 mb-6 transition-colors duration-300">
+              Prenota una dimostrazione gratuita di 15 minuti. Ti mostreremo
+              come il software può adattarsi alle tue esigenze.
+            </p>
+            <motion.button
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => {
+                const element = document.querySelector("#pricing");
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            >
+              Prenota una demo
+            </motion.button>
+          </div>
         </motion.div>
       </div>
     </section>

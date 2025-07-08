@@ -14,10 +14,10 @@ const CTASection = () => {
   };
 
   const benefits = [
-    "Configurazione in 5 minuti",
-    "Supporto dedicato 24/7",
-    "Migrazione dati gratuita",
-    "Prova gratuita 30 giorni",
+    "Setup in 30 minuti",
+    "Assistenza via WhatsApp",
+    "Migrazione dati inclusa",
+    "30 giorni gratis",
   ];
 
   return (
@@ -67,9 +67,9 @@ const CTASection = () => {
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-8 transition-colors duration-300 leading-tight"
             variants={fadeInUp}
           >
-            Pronto a Trasformare la Tua{" "}
+            Pronto a semplificare la gestione della tua{" "}
             <span className="bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent">
-              Scuola Guida?
+              scuola guida?
             </span>
           </motion.h2>
 
@@ -78,8 +78,9 @@ const CTASection = () => {
             className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed transition-colors duration-300"
             variants={fadeInUp}
           >
-            Unisciti a centinaia di scuole guida che hanno già automatizzato la
-            loro gestione. Inizia oggi la tua trasformazione digitale.
+            Smetti di perdere tempo con la burocrazia. Inizia a usare un
+            software che funziona davvero e che è stato pensato per le scuole
+            guida italiane.
           </motion.p>
 
           {/* Benefits Grid */}
@@ -113,7 +114,7 @@ const CTASection = () => {
                 className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-xl hover:shadow-2xl px-8 py-4 text-lg font-semibold backdrop-blur-sm"
                 onClick={() => scrollToSection("#contact")}
               >
-                Inizia Prova Gratuita
+                Inizia la prova gratuita
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </motion.div>
@@ -125,7 +126,7 @@ const CTASection = () => {
                 className="border-2 border-slate-300 dark:border-slate-500 text-slate-700 dark:text-slate-200 hover:bg-white/80 dark:hover:bg-slate-800/80 hover:border-slate-400 dark:hover:border-slate-400 px-8 py-4 text-lg font-semibold transition-all duration-300 backdrop-blur-sm shadow-lg hover:shadow-xl"
                 onClick={() => scrollToSection("#contact")}
               >
-                Prenota Demo
+                Chiama ora
               </Button>
             </motion.div>
           </motion.div>
@@ -135,8 +136,8 @@ const CTASection = () => {
             className="text-slate-500 dark:text-slate-400 text-sm mt-8 font-medium transition-colors duration-300"
             variants={fadeInUp}
           >
-            ✨ Nessuna carta di credito richiesta • Supporto in italiano •
-            Cancellazione gratuita
+            ✨ Nessuna carta di credito richiesta • Assistenza in italiano •
+            Puoi cancellare quando vuoi
           </motion.p>
         </motion.div>
       </div>
