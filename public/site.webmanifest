@@ -1,0 +1,26 @@
+{
+  "name": "ScuolaGuida.app - Gestione Scuola Guida",
+  "short_name": "ScuolaGuida.app",
+  "description": "La piattaforma completa per automatizzare la gestione della tua scuola guida",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["education", "business", "productivity"],
+  "lang": "it",
+  "dir": "ltr",
+  "scope": "/"
+}
